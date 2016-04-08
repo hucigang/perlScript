@@ -79,7 +79,7 @@ END
 			$spliMenu= encode("gbk", decode("utf8", $spliMenu));
 			my $minErr = 1;
 			my $waitCount = undef;
-			my $succes = encode("gbk", decode("utf8", "成功"));
+			my $succes = encode("gbk", decode("utf8", "正常"));
 			my $faile = encode("gbk", decode("utf8", "错误"));
 			my $subMenuMark = encode("gbk", decode("utf8", "【巡检菜单】："));
 			$count = 1;
@@ -113,7 +113,7 @@ END
 								$minErrInfo = "<font color=\"#0000ff\">".$succes.": ".$subRCount."; </font>" if ($subRCount > 0);
 								$minErrInfo .= "<font color=\"#ff0000\">".$faile.": ".$subECount."</font>";
 							}
-							$result[$waitCount] = "$numLevel1".encode("gbk", decode("utf8", "、")).$menuLevel1." (".$minErrInfo.")<BR></BR>";
+							$result[$waitCount] = "<font size="5"><strong>$numLevel1".encode("gbk", decode("utf8", "、")).$menuLevel1." (".$minErrInfo.")</strong></font>";
 							$subRCount = 0;
 							$subECount = 0;
 						}
